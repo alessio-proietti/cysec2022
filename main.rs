@@ -70,7 +70,7 @@ fn main() {
     //Client-side
     let decrypted_result: u8 = result.decrypt(&client_key);
 
-    print!("key generation: {:?}, square multiply/programmable bootstrapping{:?}", key_generation_time, sqmul_time-key_generation_time);
+    print!("key generation: {:?}, square multiply/programmable bootstrapping: {:?}", key_generation_time, sqmul_time-key_generation_time);
     
     //42^29 mod 221 = 9 mod 221
     assert_eq!(decrypted_result, 9);
